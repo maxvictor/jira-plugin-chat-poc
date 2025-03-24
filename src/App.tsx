@@ -10,7 +10,6 @@ const App: React.FC = () => {
   const [activeChatId, setActiveChatId] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
-  // Load chats from IndexedDB
   useEffect(() => {
     (async () => {
       const stored = await getAllChats();
